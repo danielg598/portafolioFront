@@ -1,0 +1,13 @@
+.contact { padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px); position: relative; overflow: hidden; }
+.section-divider { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(108,99,255,0.25), transparent); }
+.contact-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(108,99,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(108,99,255,0.03) 1px,transparent 1px); background-size: 64px 64px; pointer-events: none; }
+.contact-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 960px; height: 960px; background: radial-gradient(circle,rgba(108,99,255,0.08) 0%,transparent 60%); pointer-events: none; }
+.container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.section-label { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; span { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #6C63FF; letter-spacing: 0.22em; text-transform: uppercase; } }
+.label-line { height: 1px; width: 100px; background: linear-gradient(to right, rgba(108,99,255,0.5), transparent); }
+h2 { font-size: clamp(52px, 8vw, 108px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95; margin-bottom: 24px; color: #E8E8FF; }
+.contact-text { font-size: clamp(15px, 1.25vw, 19px); line-height: 1.8; color: rgba(232,232,255,0.5); max-width: 520px; margin-bottom: 48px; }
+.contact-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; background: #6C63FF; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 16px 34px; border-radius: 6px; transition: background 0.25s, transform 0.2s, box-shadow 0.25s; &:hover { background: #7D75FF; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(108,99,255,0.42); } }
+.btn-secondary { display: inline-flex; align-items: center; gap: 8px; color: rgba(232,232,255,0.55); text-decoration: none; font-size: 15px; font-weight: 500; padding: 16px 28px; border: 1px solid rgba(232,232,255,0.1); border-radius: 6px; transition: border-color 0.25s, color 0.25s; &:hover { border-color: rgba(108,99,255,0.45); color: #E8E8FF; } }
+.animate { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; &.visible { opacity: 1; transform: translateY(0); } }

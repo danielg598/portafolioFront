@@ -1,0 +1,21 @@
+<section id="stack" class="stack">
+  <div class="section-divider"></div>
+  <div class="container">
+    <div class="section-label animate">
+      <span>{{ lang.t().sectionStack }}</span>
+      <div class="label-line"></div>
+    </div>
+    <h2 class="animate">{{ lang.t().stackHeading }}</h2>
+    <p class="subtitle animate">{{ lang.t().stackSubtitle }}</p>
+    <div class="tech-grid animate">
+      <div *ngFor="let tech of techStack" class="tech-card">
+        <div class="tech-bar" [style.background]="tech.color"></div>
+        <div class="tech-info">
+          <div class="tech-category">{{ tech.category }}</div>
+          <div class="tech-name">{{ tech.name }}</div>
+          <div class="tech-level">{{ level(tech) }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

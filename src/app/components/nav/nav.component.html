@@ -1,0 +1,11 @@
+<nav class="nav">
+  <a href="#home" class="nav-logo">DA<span>.dev</span></a>
+  <div class="nav-links">
+    <a href="#about">{{ lang.t().navAbout }}</a>
+    <a href="#stack">Stack</a>
+    <a href="#services">{{ lang.t().navServices }}</a>
+    <a href="#projects">{{ lang.t().navProjects }}</a>
+    <a href="#contact">{{ lang.t().navContact }}</a>
+    <button (click)="lang.toggle()" class="lang-btn">{{ lang.t().langLabel }}</button>
+  </div>
+</nav>
