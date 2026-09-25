@@ -22,6 +22,9 @@ export interface Translations {
   projectPlaceholder1: string; projectPlaceholder2: string; projectPlaceholder3: string;
   sectionContact: string; contactHeading: string; contactText: string;
   contactCta: string; contactEmail: string;
+  formTitle: string; formName: string; formEmail: string; formMessage: string;
+  formSend: string; formSending: string; formCancel: string;
+  formSuccess: string; formError: string; formRateLimited: string;
   footerCopy: string;
 }
 
@@ -63,6 +66,12 @@ const TRANSLATIONS: Record<Lang, Translations> = {
     sectionContact: '// CONTACTO', contactHeading: '¿Hablamos?',
     contactText: 'Tienes una idea para tu negocio o quieres saber más sobre mis servicios. Escríbeme directamente por WhatsApp y te respondo pronto.',
     contactCta: 'Abrir WhatsApp', contactEmail: 'Enviar Email',
+    formTitle: 'Enviar un mensaje',
+    formName: 'Nombre', formEmail: 'Correo electrónico', formMessage: 'Mensaje',
+    formSend: 'Enviar', formSending: 'Enviando...', formCancel: 'Cancelar',
+    formSuccess: '¡Mensaje enviado! Te responderé pronto.',
+    formError: 'Ocurrió un error al enviar el mensaje. Intenta de nuevo.',
+    formRateLimited: 'Demasiados intentos. Espera unos minutos antes de volver a intentar.',
     footerCopy: 'Diseñado y desarrollado por Daniel Alzate',
   },
   en: {
@@ -102,6 +111,12 @@ const TRANSLATIONS: Record<Lang, Translations> = {
     sectionContact: '// CONTACT', contactHeading: "Let's talk?",
     contactText: "Have an idea for your business or want to know more about my services? Write to me directly on WhatsApp and I'll get back to you soon.",
     contactCta: 'Open WhatsApp', contactEmail: 'Send Email',
+    formTitle: 'Send a message',
+    formName: 'Name', formEmail: 'Email', formMessage: 'Message',
+    formSend: 'Send', formSending: 'Sending...', formCancel: 'Cancel',
+    formSuccess: "Message sent! I'll get back to you soon.",
+    formError: 'Something went wrong sending your message. Please try again.',
+    formRateLimited: 'Too many attempts. Please wait a few minutes and try again.',
     footerCopy: 'Designed and developed by Daniel Alzate',
   }
 };
