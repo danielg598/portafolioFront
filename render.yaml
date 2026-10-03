@@ -1,0 +1,23 @@
+# Deploy TEMPORAL en Render como "Static Site", mientras se consigue un
+# servidor propio. El Dockerfile y nginx.conf de este proyecto NO se usan
+# para este deploy (Render sirve los estáticos directo, sin contenedor
+# Nginx propio) — se mantienen intactos para el deploy futuro en VM.
+services:
+  - type: web
+    name: portafolio-front
+    env: static
+    buildCommand: npm ci && npx ng build --configuration production
+    staticPublishPath: ./dist/portafolio/browser
+    routes:
+      # El orden importa: Render evalúa las rutas en orden y usa la primera
+      # que matchee, así que /api/* debe ir antes que el catch-all de abajo.
+
+      # TODO: reemplazar por la URL real una vez desplegado el backend en Render.
+      - type: rewrite
+        source: /api/*
+        destination: https://mi-backend.onrender.com/api/:splat
+
+      # Fallback del Angular Router (recargar /contacto, /proyectos, etc.).
+      - type: rewrite
+        source: /*
+        destination: /index.html
