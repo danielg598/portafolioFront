@@ -24,10 +24,13 @@ export class ContactComponent {
   name = '';
   email = '';
   message = '';
+  website = ''; // honeypot: invisible para humanos, los bots lo rellenan
+  private formOpenedAt = 0;
 
   openForm() {
     this.status.set('idle');
     this.isFormOpen.set(true);
+    this.formOpenedAt = Date.now();
   }
 
   closeForm() {
@@ -44,12 +47,15 @@ export class ContactComponent {
       await this.contactApi.send({
         name: this.name.trim(),
         email: this.email.trim(),
-        message: this.message.trim()
+        message: this.message.trim(),
+        website: this.website,
+        elapsedMs: Date.now() - this.formOpenedAt
       });
       this.status.set('success');
       this.name = '';
       this.email = '';
       this.message = '';
+      this.website = '';
     } catch (err: any) {
       if (err?.status === 429) {
         this.status.set('rate-limited');

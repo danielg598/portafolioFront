@@ -35,6 +35,10 @@ h2 { font-size: clamp(52px, 8vw, 108px); font-weight: 700; letter-spacing: -0.03
   display: flex; flex-direction: column; gap: 6px;
   font-size: 13px; color: rgba(232,232,255,0.6);
 }
+.hp-field {
+  position: absolute; left: -9999px; top: -9999px;
+  width: 1px; height: 1px; overflow: hidden;
+}
 .modal input, .modal textarea {
   background: rgba(255,255,255,0.04); border: 1px solid rgba(232,232,255,0.12);
   border-radius: 6px; padding: 10px 12px; color: #E8E8FF; font-size: 14px;

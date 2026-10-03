@@ -30,6 +30,10 @@
           <p class="form-msg form-msg-success">{{ lang.t().formSuccess }}</p>
         } @else {
           <form (ngSubmit)="submit()">
+            <label class="hp-field" aria-hidden="true">
+              Website
+              <input type="text" name="website" [(ngModel)]="website" tabindex="-1" autocomplete="off" />
+            </label>
             <label>
               {{ lang.t().formName }}
               <input type="text" name="name" [(ngModel)]="name" required maxlength="100" />

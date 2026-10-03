@@ -7,6 +7,8 @@ export interface ContactPayload {
   name: string;
   email: string;
   message: string;
+  website: string;
+  elapsedMs: number;
 }
 
 @Injectable({ providedIn: 'root' })
