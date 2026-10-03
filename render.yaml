@@ -14,7 +14,7 @@ services:
 
       - type: rewrite
         source: /api/*
-        destination: https://portafolioback-3eju.onrender.com/api/:splat
+        destination: https://portafolioback-3eju.onrender.com/api/*
 
       # Fallback del Angular Router (recargar /contacto, /proyectos, etc.).
       - type: rewrite
