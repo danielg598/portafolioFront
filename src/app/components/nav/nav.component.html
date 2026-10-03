@@ -1,11 +1,22 @@
 <nav class="nav">
-  <a href="#home" class="nav-logo">DA<span>.dev</span></a>
-  <div class="nav-links">
-    <a href="#about">{{ lang.t().navAbout }}</a>
-    <a href="#stack">Stack</a>
-    <a href="#services">{{ lang.t().navServices }}</a>
-    <a href="#projects">{{ lang.t().navProjects }}</a>
-    <a href="#contact">{{ lang.t().navContact }}</a>
+  <a href="#home" class="nav-logo" (click)="closeMenu()">DA<span>.dev</span></a>
+
+  <button type="button" class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-links" [class.open]="isMenuOpen()">
+    <a href="#about" (click)="closeMenu()">{{ lang.t().navAbout }}</a>
+    <a href="#stack" (click)="closeMenu()">Stack</a>
+    <a href="#services" (click)="closeMenu()">{{ lang.t().navServices }}</a>
+    <a href="#projects" (click)="closeMenu()">{{ lang.t().navProjects }}</a>
+    <a href="#contact" (click)="closeMenu()">{{ lang.t().navContact }}</a>
     <button (click)="lang.toggle()" class="lang-btn">{{ lang.t().langLabel }}</button>
   </div>
+
+  @if (isMenuOpen()) {
+    <div class="nav-backdrop" (click)="closeMenu()"></div>
+  }
 </nav>

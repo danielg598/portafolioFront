@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { LangService } from '../../services/lang.service';
 
 @Component({
@@ -9,4 +9,13 @@ import { LangService } from '../../services/lang.service';
 })
 export class NavComponent {
   lang = inject(LangService);
+  isMenuOpen = signal(false);
+
+  toggleMenu() {
+    this.isMenuOpen.update(v => !v);
+  }
+
+  closeMenu() {
+    this.isMenuOpen.set(false);
+  }
 }

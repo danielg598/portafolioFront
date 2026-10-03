@@ -163,3 +163,25 @@
   width: 1px; height: 52px;
   background: linear-gradient(to bottom, rgba(108,99,255,0.5), transparent);
 }
+
+@media (max-width: 860px) {
+  .hero { min-height: auto; padding-top: 96px; padding-bottom: 48px; }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-right { order: -1; margin-bottom: 12px; }
+
+  .photo-wrapper { width: clamp(160px, 42vw, 220px); height: clamp(190px, 50vw, 260px); margin: 0 auto; }
+
+  .hero-greeting, .hero-role { justify-content: center; }
+
+  .hero-tagline { margin-left: auto; margin-right: auto; }
+
+  .hero-ctas { justify-content: center; }
+
+  .scroll-hint { display: none; }
+}
