@@ -12,10 +12,9 @@ services:
       # El orden importa: Render evalúa las rutas en orden y usa la primera
       # que matchee, así que /api/* debe ir antes que el catch-all de abajo.
 
-      # TODO: reemplazar por la URL real una vez desplegado el backend en Render.
       - type: rewrite
         source: /api/*
-        destination: https://mi-backend.onrender.com/api/:splat
+        destination: https://portafolioback-3eju.onrender.com/api/:splat
 
       # Fallback del Angular Router (recargar /contacto, /proyectos, etc.).
       - type: rewrite
