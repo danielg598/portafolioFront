@@ -9,7 +9,7 @@ export interface Translations {
   heroCta: string; heroCtaSecondary: string;
   photoPlaceholder: string;
   sectionAbout: string; aboutLine1: string; aboutLine2: string;
-  aboutText1: string; aboutText2: string;
+  aboutText1: string;
   statYears: string; statTech: string; statLearning: string; statCommit: string;
   sectionStack: string; stackHeading: string; stackSubtitle: string;
   sectionServices: string; servicesHeading: string; servicesSubtitle: string;
@@ -41,8 +41,7 @@ const TRANSLATIONS: Record<Lang, Translations> = {
     sectionAbout: '// SOBRE MÍ',
     aboutLine1: 'Código con propósito.',
     aboutLine2: 'Experiencia con impacto.',
-    aboutText1: 'Con 5 años de experiencia en Angular y 3 en Java Spring Boot, construyo aplicaciones web robustas, escalables y bien estructuradas. Me apasiona la arquitectura limpia y las soluciones que realmente funcionan.',
-    aboutText2: 'Actualmente me especializo en desarrollo móvil con Flutter, además de Kubernetes, Python, Machine Learning y AWS. Estudio cómo aplicar la Inteligencia Artificial en proyectos reales y fortalezco mi nivel de inglés para seguir creciendo profesionalmente.',
+    aboutText1: 'Con 5 años de experiencia en Angular y 3 en Java Spring Boot, construyo aplicaciones web robustas, escalables y bien estructuradas.',
     statYears: 'Años de experiencia', statTech: 'Tecnologías dominadas',
     statLearning: 'Aprendizaje continuo', statCommit: 'Dedicación total',
     sectionStack: '// TECNOLOGÍAS', stackHeading: 'Mi Stack Tecnológico',
@@ -86,8 +85,7 @@ const TRANSLATIONS: Record<Lang, Translations> = {
     sectionAbout: '// ABOUT ME',
     aboutLine1: 'Code with purpose.',
     aboutLine2: 'Experience with impact.',
-    aboutText1: "With 5 years of experience in Angular and 3 in Java Spring Boot, I build robust, scalable, and well-structured web applications. I'm passionate about clean architecture and solutions that truly work.",
-    aboutText2: "I'm currently specializing in mobile development with Flutter, alongside Kubernetes, Python, Machine Learning, and AWS. I'm studying how to apply Artificial Intelligence in real-world projects and strengthening my English to keep growing professionally.",
+    aboutText1: "With 5 years of experience in Angular and 3 in Java Spring Boot, I build robust, scalable, and well-structured web applications.",
     statYears: 'Years of experience', statTech: 'Technologies mastered',
     statLearning: 'Continuous learning', statCommit: 'Total dedication',
     sectionStack: '// TECH STACK', stackHeading: 'My Tech Stack',
